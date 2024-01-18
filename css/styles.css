@@ -21,8 +21,14 @@ Tabla de contenidos:
 	--font-size: 1rem;
 	--lh-text: 22px;
 }
-
-
+*,::after,::before{
+	
+	box-sizing: border-box;
+}
+div{
+	margin: 0;
+	padding: 0;
+}
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
@@ -33,4 +39,125 @@ body {
 	font-size: var(--font-size);
 	line-height: var(--lh-text);
 }
+.contenedor{
+	width:100vw;
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--body-bg-color);
+	overflow: hidden;
+}
+.card{
+	width: 600px;
+	height: auto;
+	background-color: var(--white-color);
+	padding: 3rem;
+	display: flex;
+	border-radius: 10px;
+	box-shadow: 2px 2px 50px 5px rgba(0, 0, 0, 0.2);
 
+}
+
+.card .card__img{
+	width: 40%;
+	padding:0 2rem;
+}
+
+.card__img img{
+		max-width: 150px;
+	}
+
+.card .card__datos{
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+}
+
+.card__span{
+	font-size: .6rem;
+	background-color:var(--black-color);
+	color: var(--white-color);
+	padding: 3px 5px;
+	border-radius: 15px;
+	line-height: var(--lh-text);
+	
+}
+.card__titulo{
+	font-size: 1rem;
+	margin: 0;
+	padding: .3rem 0;
+}
+.card__body{
+ display: flex;
+ flex-direction: column;
+}
+.card__body .precio__anterior{
+	font-size: .75rem;
+	font-weight: 600;
+	text-decoration: line-through;
+	padding: .5rem 0;
+}
+.card__body .precio__actual{
+	font-size: 2rem;
+	font-weight: 700;
+
+}
+.aviso{
+	font-size: .6rem;
+	font-weight: 300;
+}
+.card__body button{
+	background-color: var(--btn-bg-color);
+	outline: var(--btn-bg-color);
+	border:1px solid var(--btn-bg-color);
+	color: var(--white-color);
+	padding: .75rem;
+	font-size: .75rem;
+	border-radius: 5px;
+	border-bottom:6px solid #0e69f1;
+}
+button:hover{
+	scale:1.02;
+}
+button:active{
+	scale: .99;
+}
+ul{
+	padding:0 20px;
+	
+}
+ul .stock{
+	font-size: 1.5rem;
+	font-weight: 700;
+	list-style-type:disc;
+	color: rgb(76, 229, 30);
+	padding: 0;
+	vertical-align: middle;
+	
+}
+.stock span{
+	font-size: .75rem;
+	vertical-align: middle;
+	color: var(--text-color);
+
+}
+
+.card__footer{
+display: flex;
+justify-content: space-between;
+
+}
+.card__footer button{
+	width: 145px;
+	padding: 10px 0;
+    font-size: .75rem;	
+    font-weight: 700;
+	background-color: var(--white-color);
+	border: 1px solid #c9c9c9;
+	border-radius: 5px;	
+}
+button i{
+	padding: 5px;
+	font-size: 1rem;
+}
